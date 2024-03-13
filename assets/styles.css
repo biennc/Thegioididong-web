@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #ffc20f;
+  background-color: #ffd400;
   color: #0c0c0c;
   padding-left: 150px;
   text-align: center;
@@ -301,14 +301,144 @@ li {
   display: flex;
   background-color: #f4f3f3;
   align-items: center;
-  transform: translateY(-50%);
+  position: absolute;
+  transform: translateY(0%);
   justify-content: center;
   width: 25px;
   opacity: 0;
   transition: all 0.3s ease;
   cursor: pointer;
 }
-
+/* option promo */
+.option-promo {
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  margin: 30px 0;
+  border-radius: 12px;
+  margin: 0 0 30px;
+  position: relative;
+  z-index: 1;
+  transform: translateY(180%);
+}
+.option-promo li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  margin-right: 2%;
+  width: calc(100% / 3 - 16px);
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 0;
+}
+.option-promo li img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 70px;
+  width: auto;
+}
+.option-promo li span {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  color: #222;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  margin-left: 10px;
+  max-width: 65%;
+}
+/* shopping trends */
+.shopping-trends {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 30px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+}
+.name-box {
+  display: block;
+  overflow: hidden;
+  padding: 15px 22px;
+  font-size: 22px;
+  line-height: 36px;
+  color: #333;
+  text-transform: uppercase;
+}
+.shopping-trends ul {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  padding: 0 22px 30px;
+  justify-content: space-around;
+}
+.shopping-trends ul li {
+  position: relative;
+}
+.shopping-trends ul li span {
+  position: absolute;
+  bottom: 55px;
+  left: 18px;
+  font-size: 19px;
+  line-height: 26px;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 250px;
+  height: 24px;
+}
+.shopping-trends ul li img {
+  display: block;
+  width: 100%;
+}
+.shopping-trends ul li strong {
+  position: absolute;
+  bottom: 24px;
+  left: 18px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #2f80ed;
+  font-weight: 500;
+}
+/* box cate */
+.cate-feature {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.cate-feature .box-cate {
+  display: block;
+  overflow: hidden;
+  padding: 0 40px 30px;
+}
+.cate-feature .box-cate aside {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.box-cate aside h3 a {
+  display: block;
+  overflow: hidden;
+  color: #333;
+  text-align: center;
+  width: 112px;
+}
+.box-cate aside h3 img {
+  display: block;
+  height: 56px;
+  margin: auto;
+  width: auto;
+  height: 60px;
+}
+.box-cate aside h3 span {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 5px;
+}
 /* -----------slider js----------- */
 .slider-contend-left-top img {
   position: absolute;
@@ -404,6 +534,34 @@ li {
 .slider-product-st-content-item-text li:nth-child(5) {
   font-size: 12px;
 }
+/* arrow-button */
+.theme-fs .slick-arrow.next-arrow {
+  right: 0;
+}
+.slick-arrow.slick-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.slick-arrow.prev-arrow {
+  border-radius: 0 4px 4px 0;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 60px;
+  width: 31px;
+  padding: 10px;
+  border: none;
+  left: -20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px 0 0 4px;
+  z-index: 1;
+  cursor: pointer;
+}
 
 /* second */
 
@@ -492,24 +650,24 @@ price-and-discount {
 /*----------footer-----------*/
 
 .site-footer {
-  background-color: #f3f3f3;
+  background-color: #fff;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
   color: #737373;
 }
 .site-footer-content {
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 .site-footer-content li {
   font-size: 13px;
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 .site-footer-content p {
   font-size: 12px;
 }
 .row {
-  background-color: #f3f3f3;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
 }
