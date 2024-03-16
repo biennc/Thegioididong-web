@@ -21,6 +21,10 @@ header {
   align-items: center;
 }
 
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
 ul {
   list-style: none;
 }
@@ -40,6 +44,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5px;
 }
 
 nav ul li,
@@ -48,19 +53,27 @@ a {
   font-size: 12px;
 }
 
+nav ul li:first-child {
+  width: 15%;
+}
+nav ul li:first-child a img {
+  max-width: 100%;
+}
 nav ul li:nth-child(2) {
   height: 25px;
+  width: 6%;
   padding: 0 8px;
   padding-top: 8px;
   background-color: #ffbc06;
   border-radius: 5px;
 }
 nav ul li:nth-child(2) i {
-  margin-left: 6px;
+  margin-left: 15%;
 }
 
 nav ul li:nth-child(3) {
   position: relative;
+  width: 18%;
 }
 nav ul li:nth-child(3) i {
   position: absolute;
@@ -79,8 +92,9 @@ nav ul li:nth-child(3) input {
 }
 nav ul li:nth-child(4) {
   height: 25px;
-  padding: 0 8px;
-  padding-top: 8px;
+  width: 6%;
+  padding: 0 0.7%;
+  padding-top: 0.8%;
   background-color: #ffbc06;
   border-radius: 5px;
 }
@@ -93,14 +107,25 @@ nav ul li:nth-child(4) button i {
 }
 
 nav ul li:nth-child(5) {
+  display: inline-block;
   height: 25px;
-  padding: 0 8px;
+  width: 11%;
+  padding: 0px 8px;
   padding-top: 8px;
   background-color: #ffbc06;
   border-radius: 5px;
 }
 nav ul li:nth-child(6) {
   display: inline-block;
+  width: 5%;
+}
+nav ul li:nth-child(7) {
+  display: inline-block;
+  width: 5%;
+}
+nav ul li:nth-child(8) {
+  display: inline-block;
+  width: 5%;
 }
 
 .container {
@@ -137,12 +162,12 @@ section {
 .address-form-contend h2 {
   border-bottom: 1px solid #ddd;
   padding: 12px 0px;
-  position: relative;
+  /* position: relative; */
   font-size: 14px;
 }
 .address-form-contend h2 span {
   display: block;
-  position: absolute;
+  /* position: absolute; */
   height: 30px;
   padding: 0 6px;
   border: 1px solid #ddd;
@@ -186,9 +211,9 @@ select {
   margin-right: 6px;
 }
 .menu-bar-big-banner a img {
-  max-width: 1200px;
+  width: 100%;
   height: auto;
-  position: absolute;
+  position: relative;
   transform: translateY(5%);
   object-fit: cover;
   display: block;
@@ -201,27 +226,29 @@ select {
 li {
   list-style: none;
 }
+.slider {
+  padding: 20px 0;
+  height: 350px;
+  position: relative;
+}
 .banner-top-zone-home {
   box-sizing: border-box;
   padding-bottom: 40px;
-  margin-left: 16.6%;
+  margin-left: 8.4%;
+  margin-right: 8.4%;
   height: 100px;
 }
 .banner-top-zone-home img {
   display: block;
   border-radius: 8px;
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 100%;
   height: auto;
   position: relative;
-  transform: translateY(36%);
+  transform: translateY(32%);
 }
-.slider {
-  padding: 20px 0;
-  height: 350px;
-  position: relative;
-}
-.slider-contend {
+
+/* .slider-contend {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -233,10 +260,10 @@ li {
 .slider-contend-left-top {
   width: 100%;
   height: 300px;
-}
-/* .slider-contend-left-top:hover i {
+} 
+.slider-contend-left-top:hover i {
   opacity: 1;
-} */
+}
 .slider-contend-left-bottom {
   display: flex;
   justify-content: space-between;
@@ -308,8 +335,10 @@ li {
   opacity: 0;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-/* option promo */
+}  */
+
+/* ---option promo--- */
+
 .option-promo {
   display: flex;
   overflow: hidden;
@@ -375,6 +404,7 @@ li {
 }
 .shopping-trends ul li {
   position: relative;
+  width: 24%;
 }
 .shopping-trends ul li span {
   position: absolute;
@@ -417,6 +447,10 @@ li {
   align-items: flex-start;
   overflow: hidden;
   margin-bottom: 16px;
+}
+.box-cate aside h3 {
+  width: 10%;
+  height: 50%;
 }
 .box-cate aside h3 a {
   display: block;
@@ -479,7 +513,16 @@ li {
   border-radius: 16px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  max-width: 1200px;
+  max-width: 100%;
+  position: relative;
+}
+.slider-product-st-banner img {
+  box-sizing: border-box;
+  padding-left: 9.5%;
+  padding-right: 9.5%;
+}
+.slider-product-st-content-container {
+  position: relative;
 }
 .slider-product-st-content-items {
   display: flex;
@@ -487,15 +530,19 @@ li {
 }
 .slider-product-st-content-item {
   padding: 40px 12px 40px;
-  width: 156px;
+  width: 16.6666%;
   background-color: #fff;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 0.6% 0.6%;
 }
-.slider-product-st-content-item:hover > img {
+.slider-product-st-content-item-img {
+  width: 100%;
+  height: 40%;
+}
+.slider-product-st-content-item-img:hover > img {
   transform: translateY(-10%);
 }
-.slider-product-st-content-item > img {
+.slider-product-st-content-item-img > img {
   width: 100%;
   transition: all 0.4s ease;
 }
@@ -575,7 +622,32 @@ li {
   border-radius: 16px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  max-width: 1200px;
+  max-width: 100%;
+}
+.slider-product-second-content-container {
+  position: relative;
+}
+.slider-product-content-arrow-btn {
+  position: absolute;
+  top: 49%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.slider-product-content-arrow-btn i {
+  width: 25px;
+  height: 50px;
+  font-size: 32px;
+  margin: 10px;
+  color: #333;
+  background-color: rgb(253, 242, 242);
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  justify-content: center;
 }
 .slider-product-second-content-items {
   display: flex;
@@ -583,10 +655,11 @@ li {
 }
 .slider-product-second-content-item {
   padding: 40px 12px 40px;
-  width: 180px;
+  width: 20%;
+  margin: 0.8% 0.8%;
+  height: auto;
   background-color: #fff;
   border-radius: 5px;
-  margin: 10px 0;
 }
 .slider-product-second-content-item-text li:nth-child(2) {
   color: #d0021c;
@@ -602,10 +675,14 @@ li {
 .slider-product-second-content-item-text li:first-child:hover {
   color: #0b92f3;
 }
-.slider-product-second-content-item:hover > img {
+.slider-product-second-content-item-img {
+  width: 100%;
+  height: 40%;
+}
+.slider-product-second-content-item-img:hover {
   transform: translateY(-10%);
 }
-.slider-product-second-content-item > img {
+.slider-product-second-content-item-img img {
   width: 100%;
   transition: all 0.4s ease;
 }
@@ -719,9 +796,12 @@ price-and-discount {
 .copyright-text {
   margin: 0;
 }
+
+/* *******************responsive******************** */
+
 @media (max-width: 991px) {
-  .site-footer [class^="col-"] {
-    margin-bottom: 30px;
+  .option-promo {
+    display: none;
   }
 }
 @media (max-width: 767px) {
