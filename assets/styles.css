@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f3f3f3;
   box-sizing: border-box;
 }
 
@@ -30,6 +31,10 @@ ul {
 }
 a {
   text-decoration: none;
+}
+header img {
+  width: 100%;
+  height: auto;
 }
 
 /*---------nav------------*/
@@ -399,12 +404,13 @@ li {
   display: flex;
   flex-flow: row wrap;
   overflow: hidden;
-  padding: 0 22px 30px;
+  padding: 0 3% 3%;
   justify-content: space-around;
 }
 .shopping-trends ul li {
   position: relative;
   width: 24%;
+  padding: 0.5% 0.5%;
 }
 .shopping-trends ul li span {
   position: absolute;
@@ -421,7 +427,8 @@ li {
 }
 .shopping-trends ul li img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .shopping-trends ul li strong {
   position: absolute;
@@ -432,32 +439,43 @@ li {
   color: #2f80ed;
   font-weight: 500;
 }
+
 /* box cate */
+
 .cate-feature {
   background-color: #fff;
   border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }
 .cate-feature .box-cate {
   display: block;
   overflow: hidden;
-  padding: 0 40px 30px;
+  padding: 0 2%;
 }
 .cate-feature .box-cate aside {
   display: flex;
   align-items: flex-start;
   overflow: hidden;
   margin-bottom: 16px;
+  max-width: 100%;
 }
 .box-cate aside h3 {
-  width: 10%;
-  height: 50%;
+  width: 9.6%;
+  height: auto;
+  padding: 0 0.2%;
 }
 .box-cate aside h3 a {
   display: block;
   overflow: hidden;
   color: #333;
   text-align: center;
-  width: 112px;
+  max-width: 100%;
+  height: auto;
+}
+.img-boxcate {
+  max-width: 100%;
+  height: auto;
 }
 .box-cate aside h3 img {
   display: block;
@@ -503,7 +521,10 @@ li {
 }
 
 /* first */
-
+.slider-product-st {
+  max-width: 100%;
+  height: auto;
+}
 .slider-product-st-content {
   background-color: #fed100;
   padding: 20px;
@@ -514,36 +535,41 @@ li {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   max-width: 100%;
+  height: auto;
   position: relative;
 }
 .slider-product-st-banner img {
-  box-sizing: border-box;
-  padding-left: 9.5%;
-  padding-right: 9.5%;
+  width: 100%;
+  height: auto;
 }
 .slider-product-st-content-container {
   position: relative;
+  max-width: 100%;
+  height: auto;
 }
 .slider-product-st-content-items {
   display: flex;
   justify-content: space-evenly;
+  max-width: auto;
+  height: auto;
 }
 .slider-product-st-content-item {
   padding: 40px 12px 40px;
-  width: 16.6666%;
+  max-width: 16.6666%;
+  height: auto;
   background-color: #fff;
   border-radius: 5px;
   margin: 0.6% 0.6%;
 }
 .slider-product-st-content-item-img {
-  width: 100%;
+  max-width: 100%;
   height: 40%;
 }
 .slider-product-st-content-item-img:hover > img {
   transform: translateY(-10%);
 }
 .slider-product-st-content-item-img > img {
-  width: 100%;
+  max-width: 100%;
   transition: all 0.4s ease;
 }
 .slider-product-st-content-item-text {
@@ -555,7 +581,7 @@ li {
 }
 .slider-product-st-content-item-text li:first-child {
   height: 30px;
-  width: 70%;
+  max-width: 70%;
   font-size: 14px;
 }
 .slider-product-st-content-item-text li:first-child:hover {
@@ -743,7 +769,7 @@ price-and-discount {
 .site-footer-content p {
   font-size: 12px;
 }
-.row {
+.row-footer {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -799,7 +825,7 @@ price-and-discount {
 
 /* *******************responsive******************** */
 
-@media (max-width: 991px) {
+@media (max-width: 1239px) {
   .option-promo {
     display: none;
   }
@@ -818,5 +844,51 @@ price-and-discount {
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+
+/* grid system */
+.grid {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+.grid.wide {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+/* PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .wide {
+    width: 984px;
+  }
+  .wide.row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+@media (min-width: 1113px) {
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+/* Tablet and PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .wide {
+    width: 644px;
+  }
+}
+@media (min-width: 740px) {
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
   }
 }
